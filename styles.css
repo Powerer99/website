@@ -538,7 +538,7 @@ blockquote {
 
 .contact-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 28px;
   align-items: start;
   margin-bottom: 20px;
@@ -559,60 +559,6 @@ blockquote {
   gap: 18px;
 }
 
-.contact-form,
-.contact-form label {
-  display: grid;
-  gap: 8px;
-}
-
-.contact-form {
-  gap: 16px;
-  padding: clamp(20px, 3vw, 30px);
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.contact-form label {
-  color: var(--ink);
-  font-weight: 800;
-  font-size: 0.9rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  color: var(--ink);
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  font: inherit;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: 3px solid rgba(218, 151, 36, 0.24);
-  border-color: var(--amber);
-}
-
-.contact-form .button {
-  justify-self: start;
-}
-
-.contact-form .form-note {
-  font-size: 0.82rem;
-}
 
 footer {
   display: flex;
@@ -701,9 +647,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
-  }
 
   .metrics article {
     padding: 18px 16px;
