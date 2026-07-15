@@ -20,12 +20,10 @@ contactForm?.addEventListener("submit", (event) => {
     `Reply to: ${data.get("email").trim()}`,
   ].join("\n");
 
-  const emailUrl = new URL("https://mail.google.com/mail/");
-  emailUrl.searchParams.set("view", "cm");
-  emailUrl.searchParams.set("fs", "1");
-  emailUrl.searchParams.set("to", "ibrahimdavid08@gmail.com");
-  emailUrl.searchParams.set("su", subject);
-  emailUrl.searchParams.set("body", body);
+  const emailAddress = ["ibrahimdavid08", "gmail.com"].join("@");
+  const emailUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const formNote = document.querySelector("#form-note");
 
-  window.location.assign(emailUrl.toString());
+  formNote.textContent = "Opening your email app… If nothing happens, your browser does not have an email app configured.";
+  window.location.href = emailUrl;
 });
