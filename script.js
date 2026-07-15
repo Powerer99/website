@@ -4,21 +4,28 @@ window.addEventListener("scroll", () => {
   header.toggleAttribute("data-scrolled", window.scrollY > 24);
 });
 
-document.querySelectorAll(".copy-email").forEach((button) => {
-  const originalText = button.textContent;
+const contactForm = document.querySelector("#contact-form");
 
-  button.addEventListener("click", async () => {
-    const email = button.dataset.email;
+contactForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-    try {
-      await navigator.clipboard.writeText(email);
-      button.textContent = "Email Copied";
-    } catch {
-      button.textContent = email;
-    }
+  if (!contactForm.reportValidity()) return;
 
-    window.setTimeout(() => {
-      button.textContent = originalText;
-    }, 2200);
-  });
+  const data = new FormData(contactForm);
+  const subject = data.get("subject").trim();
+  const body = [
+    data.get("message").trim(),
+    "",
+    `From: ${data.get("name").trim()}`,
+    `Reply to: ${data.get("email").trim()}`,
+  ].join("\n");
+
+  const emailUrl = new URL("https://mail.google.com/mail/");
+  emailUrl.searchParams.set("view", "cm");
+  emailUrl.searchParams.set("fs", "1");
+  emailUrl.searchParams.set("to", "ibrahimdavid08@gmail.com");
+  emailUrl.searchParams.set("su", subject);
+  emailUrl.searchParams.set("body", body);
+
+  window.open(emailUrl.toString(), "_blank", "noopener,noreferrer");
 });

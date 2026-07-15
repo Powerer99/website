@@ -17,8 +17,6 @@
         "@type": "Person",
         "name": "David Ibrahim",
         "jobTitle": "PHP Developer",
-        "email": "mailto:ibrahimdavid08@gmail.com",
-        "telephone": "+447484341365",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Long Eaton",
@@ -75,8 +73,7 @@
             <li>Strong mix of PHP, SQL, Playwright, NestJS, .NET, security, and client-facing delivery.</li>
           </ul>
           <div class="hero-actions">
-            <a class="button primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=ibrahimdavid08@gmail.com&su=PHP%20Developer%20Opportunity" target="_blank" rel="noreferrer">Email Me</a>
-            <button class="button secondary copy-email" type="button" data-email="ibrahimdavid08@gmail.com">Copy Email</button>
+            <a class="button primary" href="#contact">Contact Me</a>
             <a class="button secondary" href="assets/David_Ibrahim_PHP_Developer_CV.pdf" target="_blank">Download CV</a>
             <a class="button secondary" href="https://www.linkedin.com/in/david-ibrahim-4974721a1/" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
@@ -138,14 +135,6 @@
         <article>
           <span>Current Role</span>
           <strong>PHP Developer at SortGroup</strong>
-        </article>
-        <article>
-          <span>Email</span>
-          <strong><a href="mailto:ibrahimdavid08@gmail.com">ibrahimdavid08@gmail.com</a></strong>
-        </article>
-        <article>
-          <span>Phone</span>
-          <strong><a href="tel:+447484341365">07484 341365</a></strong>
         </article>
       </section>
 
@@ -348,20 +337,38 @@
       </section>
 
       <section class="contact-section" id="contact">
-        <div>
+        <div class="contact-copy">
           <p class="eyebrow">Contact</p>
           <h2>Available for PHP backend and software developer opportunities.</h2>
           <p>
-            You can contact me directly by email or phone, review my CV, or connect with me on LinkedIn.
+            Send the details below and your email app will open with the message ready to send.
           </p>
+          <div class="contact-actions">
+            <a class="button secondary" href="https://www.linkedin.com/in/david-ibrahim-4974721a1/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
         </div>
-        <div class="contact-actions">
-          <a class="button primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=ibrahimdavid08@gmail.com&su=PHP%20Developer%20Opportunity" target="_blank" rel="noreferrer">Email Me</a>
-          <button class="button secondary copy-email" type="button" data-email="ibrahimdavid08@gmail.com">Copy Email</button>
-          <a class="button secondary" href="tel:+447484341365">Call</a>
-          <a class="button secondary" href="assets/David_Ibrahim_PHP_Developer_CV.pdf" target="_blank">CV PDF</a>
-          <a class="button secondary" href="https://www.linkedin.com/in/david-ibrahim-4974721a1/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <label>
+              Your name
+              <input type="text" name="name" autocomplete="name" required maxlength="80">
+            </label>
+            <label>
+              Your email
+              <input type="email" name="email" autocomplete="email" required maxlength="120">
+            </label>
+          </div>
+          <label>
+            Subject
+            <input type="text" name="subject" required maxlength="120" value="PHP Developer Opportunity">
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="6" required maxlength="3000" placeholder="Tell me about the role or project..."></textarea>
+          </label>
+          <button class="button primary" type="submit">Prepare Email</button>
+          <p class="form-note" id="form-note">Nothing is stored by this website. You will review and send the message from your own email app.</p>
+        </form>
       </section>
     </main>
 
