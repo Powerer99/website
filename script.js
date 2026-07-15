@@ -27,5 +27,5 @@ contactForm?.addEventListener("submit", (event) => {
   emailUrl.searchParams.set("su", subject);
   emailUrl.searchParams.set("body", body);
 
-  window.open(emailUrl.toString(), "_blank", "noopener,noreferrer");
+  window.location.assign(emailUrl.toString());
 });
