@@ -3,20 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>David Ibrahim | PHP Developer</title>
-    <meta name="description" content="David Ibrahim is a PHP Developer in Nottingham, UK, specialising in CakePHP, RESTful APIs, database pipelines, version upgrades, automated testing, Docker, and AWS.">
-    <meta property="og:title" content="David Ibrahim | PHP Developer">
-    <meta property="og:description" content="PHP Developer with commercial experience across CakePHP, REST APIs, MySQL, PostgreSQL, testing, Docker, AWS, NestJS, and .NET.">
+    <title>David Ibrahim | Software Developer</title>
+    <meta name="description" content="David Ibrahim is a Software Developer in Nottingham, UK, specialising in PHP and CakePHP, RESTful APIs, NestJS, .NET, SQL, automated testing, Docker, and AWS.">
+    <meta property="og:title" content="David Ibrahim | Software Developer">
+    <meta property="og:description" content="Software Developer with commercial experience across PHP, CakePHP, NestJS, .NET, MySQL, PostgreSQL, Playwright, Docker, AWS, and data analysis.">
     <meta property="og:type" content="profile">
     <meta property="og:image" content="assets/career-hero.png">
-    <link rel="preload" href="assets/career-hero.png" as="image">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lab.css">
+    <link rel="stylesheet" href="portfolio-theme.css">
+    <link rel="stylesheet" href="network.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "David Ibrahim",
-        "jobTitle": "PHP Developer",
+        "jobTitle": "Software Developer",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Long Eaton",
@@ -37,139 +39,241 @@
           ".NET",
           "Docker",
           "AWS",
-          "Playwright"
+          "Playwright",
+          "Python",
+          "Tableau",
+          "Excel",
+          "Data Analysis"
         ]
       }
     </script>
   </head>
   <body>
+    <div class="system-background page-background" aria-hidden="true">
+      <div class="ambient-glow"></div>
+      <svg class="service-topology" viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMid slice" fill="none">
+        <g stroke="currentColor" stroke-width="1"><path d="M0 180H120V330H300M120 180V75H480M1440 210H1320V420H1130M1440 800H1280V640H1130M0 780H160V600H310M300 1000V890H100V780M1180 0V90H1370V210"/><rect x="70" y="140" width="100" height="40" rx="6"/><rect x="1270" y="170" width="100" height="40" rx="6"/><rect x="110" y="780" width="100" height="40" rx="6"/><circle cx="120" cy="330" r="5"/><circle cx="1320" cy="420" r="5"/><circle cx="1280" cy="640" r="5"/><circle cx="160" cy="600" r="5"/></g>
+        <g fill="currentColor" font-family="Consolas, monospace" font-size="11"><text x="91" y="165">REQUEST</text><text x="1292" y="195">SERVICE</text><text x="130" y="805">STORAGE</text></g>
+      </svg>
+      <pre class="background-code code-left"><span>// service boundary</span>
+<b>async function</b> handle(request) {
+  <b>const</b> result = <i>await</i> service.run();
+  <b>return</b> response.json(result);
+}</pre>
+      <pre class="background-code code-right"><span>-- data layer</span>
+<b>SELECT</b> id, status
+<b>FROM</b> requests
+<b>WHERE</b> status = <i>'ready'</i>;</pre>
+      <span class="signal signal-one"></span><span class="signal signal-two"></span><span class="signal signal-three"></span>
+      <span class="system-label">GET /api/services</span><span class="system-label">{ status: 200 }</span>
+    </div>
+    <button class="motion-control" type="button" aria-pressed="false" hidden>Pause background</button>
+    <button class="network-launch" type="button" hidden aria-haspopup="dialog">Explore the network <span aria-hidden="true">↗</span></button>
+    <dialog class="network-dialog" aria-labelledby="network-title">
+      <header class="network-heading"><div><p class="eyebrow">An interactive illustration</p><h2 id="network-title">Behind every request.</h2><p>Explore the connections, then send a simulated request through the system.</p></div><button type="button" class="network-close" aria-label="Close network explorer">✕</button></header>
+      <div class="network-workspace">
+        <div class="network-map" aria-label="Select a component to explore its role"></div>
+        <aside class="network-inspector" aria-live="polite" aria-atomic="true"><span class="eyebrow">Selected component</span><h3 id="network-node-title">API boundary</h3><p id="network-node-copy"></p><a id="network-evidence" href="#experience">Explore my experience →</a></aside>
+      </div>
+      <div class="network-console">
+        <label for="network-route">Request route<select id="network-route"><option value="data">Read data</option><option value="quality">Validate a change</option><option value="delivery">Prepare a release</option></select></label>
+        <button type="button" class="button primary" id="network-send">Send request →</button>
+        <button type="button" class="button secondary" id="network-reset">Reset</button>
+        <p id="network-status" role="status">Ready. Select a node or send a request.</p>
+      </div>
+      <p class="network-note">Conceptual simulation using fictional traffic. No requests leave your browser; this is not a live production architecture.</p>
+    </dialog>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="David Ibrahim portfolio home">
         <span class="brand-mark">D</span>
         <span>David Ibrahim</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
+        <a href="#engineering-lab">Explore</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Impact</a>
+        <a href="#building">Building</a>
+        <a href="#projects">Work</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="header-action" href="assets/David_Ibrahim_PHP_Developer_CV.pdf" target="_blank">View CV</a>
+      <a class="header-action" href="assets/David_Ibrahim_PHP_Developer_CV.pdf" target="_blank" rel="noreferrer">View CV <span aria-hidden="true">↗</span></a>
     </header>
 
-    <main id="top">
-      <section class="hero">
+    <main id="main-content">
+      <section class="hero" id="top">
         <img class="hero-image" src="assets/career-hero.png" alt="Modern professional workspace with laptop, resume pages, and notebook">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">PHP Developer - Nottingham, UK</p>
-          <h1>PHP backend developer.</h1>
-          <p class="hero-copy">
-            3+ years of commercial experience with CakePHP 4.5, REST APIs, MySQL/PostgreSQL, version upgrades, automated testing, Docker, and AWS-aware delivery.
-          </p>
-          <ul class="hero-proof" aria-label="Recruiter highlights">
-            <li>I currently lead PHP backend development on SortGroup's main product.</li>
-            <li>Built a database anonymisation pipeline for UAT, Dev, and Test environments.</li>
-            <li>Strong mix of PHP, SQL, Playwright, NestJS, .NET, security, and client-facing delivery.</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="button primary" href="https://www.linkedin.com/in/david-ibrahim-4974721a1/" target="_blank" rel="noreferrer">Contact on LinkedIn</a>
-            <a class="button secondary" href="assets/David_Ibrahim_PHP_Developer_CV.pdf" target="_blank">Download CV</a>
-            <a class="button secondary" href="https://www.linkedin.com/in/david-ibrahim-4974721a1/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <div class="system-background" aria-hidden="true"><span class="signal signal-one"></span><span class="signal signal-two"></span><span class="signal signal-three"></span><span class="system-label">GET /api/services</span><span class="system-label">{ status: 200 }</span></div>
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="availability"><span></span> Open to the right software opportunity</div>
+            <p class="eyebrow">Software Developer · Nottingham, UK</p>
+            <h1>I build backend systems that teams can <em>trust.</em></h1>
+            <p class="hero-copy">
+              3+ years of commercial experience delivering APIs, database solutions, microservices, internal tooling, and automated testing across PHP, NestJS, and .NET.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="mailto:ibrahimdavid08@gmail.com">Start a conversation <span aria-hidden="true">→</span></a>
+              <a class="button secondary" href="assets/David_Ibrahim_PHP_Developer_CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+              <a class="text-link" href="https://www.linkedin.com/in/david-ibrahim-4974721a1/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
+          <aside class="hero-card" aria-label="David's core expertise">
+            <div class="hero-card-head">
+              <span>Developer profile</span>
+              <span class="live-dot">Available</span>
+            </div>
+            <div class="hero-card-code" aria-hidden="true">
+              <span><i>01</i> const developer = {</span>
+              <span><i>02</i> &nbsp;&nbsp;focus: <b>'backend systems'</b>,</span>
+              <span><i>03</i> &nbsp;&nbsp;stack: <b>['PHP', 'NestJS', '.NET']</b>,</span>
+              <span><i>04</i> &nbsp;&nbsp;quality: <b>'built in'</b></span>
+              <span><i>05</i> };</span>
+            </div>
+            <div class="hero-card-proof">
+              <div><strong>3+</strong><span>commercial years</span></div>
+              <div><strong>2:1</strong><span>Computer Science</span></div>
+            </div>
+          </aside>
         </div>
+        <a class="hero-scroll" href="#profile" aria-label="Scroll to profile">
+          <span>Explore my work</span><i aria-hidden="true">↓</i>
+        </a>
       </section>
 
       <section class="metrics" aria-label="Career highlights">
-        <article>
-          <strong>3+</strong>
-          <span>Years in commercial development</span>
+        <article class="reveal">
+          <span class="metric-number">3+</span>
+          <span>Years of commercial delivery</span>
         </article>
-        <article>
-          <strong>Now</strong>
-          <span>Leading PHP backend at SortGroup</span>
+        <article class="reveal">
+          <span class="metric-number">API</span>
+          <span>Backend-first engineering focus</span>
         </article>
-        <article>
-          <strong>Stack</strong>
-          <span>PHP, CakePHP, SQL, Docker, AWS</span>
+        <article class="reveal">
+          <span class="metric-number">3</span>
+          <span>Core ecosystems: PHP, NestJS, .NET</span>
         </article>
-        <article>
-          <strong>Proof</strong>
-          <span>2:1 BSc Computer Science</span>
+        <article class="reveal">
+          <span class="metric-number">2:1</span>
+          <span>BSc Computer Science</span>
         </article>
       </section>
 
       <section class="stack-bar" aria-label="Primary technology stack">
-        <span>PHP</span>
-        <span>CakePHP 4.5</span>
-        <span>REST APIs</span>
-        <span>MySQL</span>
-        <span>PostgreSQL</span>
-        <span>NestJS</span>
-        <span>.NET / C#</span>
-        <span>Playwright</span>
-        <span>Docker</span>
-        <span>AWS</span>
+        <span>PHP</span><span>CakePHP 4.5</span><span>REST APIs</span><span>MySQL</span><span>PostgreSQL</span><span>NestJS</span><span>TypeScript</span><span>.NET / C#</span><span>Playwright</span><span>Docker</span><span>AWS</span>
       </section>
 
-      <section class="section intro-section">
-        <div class="section-heading">
-          <p class="eyebrow">Profile</p>
-          <h2>Backend-focused PHP developer with production ownership.</h2>
+      <section class="section intro-section" id="profile">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 · Profile</p>
+          <h2>Production-minded engineering, from database to deployment.</h2>
         </div>
-        <div class="intro-copy">
-          <p>
-            I am a PHP Developer with 3+ years of commercial experience, specialising in PHP and CakePHP 4.5 as my primary technology stack. I currently lead PHP backend development on the main product at SortGroup, building RESTful APIs and maintainable backend systems.
+        <div class="intro-copy reveal">
+          <p class="intro-lead">
+            I turn complex backend requirements into maintainable software that performs reliably and gives teams confidence to ship.
           </p>
           <p>
-            My experience spans complex database pipelines, MySQL and PostgreSQL optimisation, dependency and framework upgrades, automated test suites, Docker-based development environments, AWS deployment support, security testing, NestJS, TypeScript, .NET, and client-facing delivery.
+            My experience spans REST APIs, MySQL and PostgreSQL optimisation, microservices, automated testing, Docker-based environments, AWS deployment support, security testing, and client-facing delivery. I also bring practical data-analysis skills with Python, Tableau, and Excel.
           </p>
         </div>
       </section>
 
-      <section class="profile-strip" aria-label="Recruiter quick facts">
-        <article>
-          <span>Location</span>
-          <strong>Long Eaton, Nottingham, UK</strong>
-        </article>
-        <article>
-          <span>Current Role</span>
-          <strong>PHP Developer at SortGroup</strong>
-        </article>
+      <section class="section fit-section" aria-labelledby="fit-title">
+        <section class="engineering-lab" id="engineering-lab" aria-labelledby="lab-title">
+          <div class="section-heading">
+            <p class="eyebrow">Explore the engineering</p>
+            <div><h2 id="lab-title">Follow a request. Discover the skills behind it.</h2><p class="lab-intro">Select a layer to see how my experience connects. This is a conceptual map of my skills, not a production system diagram.</p></div>
+          </div>
+          <div class="architecture-shell">
+            <div class="architecture-map" role="group" aria-label="Explore engineering skills">
+              <button type="button" data-layer="api" aria-pressed="true" aria-controls="layer-detail"><span>01 / Interface</span><strong>API & services</strong><small>PHP · CakePHP · NestJS · .NET</small></button>
+              <span class="map-connector" aria-hidden="true">↓</span>
+              <button type="button" data-layer="database" aria-pressed="false" aria-controls="layer-detail"><span>02 / Persistence</span><strong>Databases & pipelines</strong><small>MySQL · PostgreSQL · SQL</small></button>
+              <span class="map-connector" aria-hidden="true">↓</span>
+              <button type="button" data-layer="delivery" aria-pressed="false" aria-controls="layer-detail"><span>03 / Environment</span><strong>Deployment & consistency</strong><small>Docker · AWS support</small></button>
+              <div class="crosscutting">
+                <button type="button" data-layer="quality" aria-pressed="false" aria-controls="layer-detail"><strong>Quality & security</strong><small>Playwright · Unit testing</small></button>
+                <button type="button" data-layer="analysis" aria-pressed="false" aria-controls="layer-detail"><strong>Analysis & insight</strong><small>Python · Tableau · Excel</small></button>
+                <button type="button" data-layer="people" aria-pressed="false" aria-controls="layer-detail"><strong>Client delivery</strong><small>Requirements · QA · Communication</small></button>
+              </div>
+            </div>
+            <div class="layer-detail" id="layer-detail" aria-live="polite" aria-atomic="true">
+              <p class="eyebrow" id="layer-label">Commercial experience</p>
+              <h3 id="layer-title">APIs with clear responsibilities.</h3>
+              <p id="layer-copy">RESTful API development across PHP and CakePHP 4.5, NestJS and TypeScript, and .NET and C#, following MVC principles and clean code standards.</p>
+              <h4>Evidence from my work</h4>
+              <ul id="layer-evidence"><li>API development at SortGroup.</li><li>NestJS microservices integrated with PostgreSQL.</li><li>.NET internal tooling and service integrations.</li></ul>
+              <a class="button secondary" id="layer-link" href="#experience">See commercial experience →</a>
+            </div>
+          </div>
+        </section>
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 · Where I add value</p>
+          <h2 id="fit-title">Explore how I can contribute to your engineering team.</h2>
+        </div>
+        <div class="fit-shell reveal">
+          <div class="fit-tabs" role="tablist" aria-label="Areas of expertise">
+            <button type="button" role="tab" aria-selected="true" data-fit="backend">Backend systems</button>
+            <button type="button" role="tab" aria-selected="false" data-fit="quality">Quality & delivery</button>
+            <button type="button" role="tab" aria-selected="false" data-fit="data">Data & tooling</button>
+          </div>
+          <div class="fit-panel" role="tabpanel" aria-live="polite">
+            <div>
+              <p class="fit-kicker" id="fit-kicker">Best fit</p>
+              <h3 id="fit-panel-title">API and backend development</h3>
+              <p id="fit-description">I design maintainable services around clean boundaries, dependable data flows, and pragmatic architecture.</p>
+            </div>
+            <ul class="fit-evidence" id="fit-evidence">
+              <li>RESTful APIs across PHP, CakePHP, NestJS, and .NET</li>
+              <li>Microservices integrated with PostgreSQL</li>
+              <li>Complex MySQL and PostgreSQL query optimisation</li>
+            </ul>
+            <div class="fit-stack" id="fit-stack"><span>PHP</span><span>CakePHP</span><span>NestJS</span><span>.NET</span><span>SQL</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-strip reveal" aria-label="Recruiter quick facts">
+        <article><span>Based in</span><strong>Long Eaton, Nottingham</strong></article>
+        <article><span>Current role</span><strong>Software Developer · SortGroup</strong></article>
+        <article><span>Core strength</span><strong>Backend APIs & data systems</strong></article>
+        <article><span>Also brings</span><strong>Testing, security & client delivery</strong></article>
       </section>
 
       <section class="section" id="experience">
-        <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2>Commercial PHP and backend experience.</h2>
+        <div class="section-heading reveal">
+          <p class="eyebrow">03 · Experience</p>
+          <h2>A track record of shipping useful software.</h2>
         </div>
         <div class="timeline">
-          <article class="timeline-item">
+          <article class="timeline-item reveal">
             <div class="timeline-meta">
               <span>May 2024 - Present</span>
               <strong>SortGroup - Nottingham, UK</strong>
             </div>
             <div class="timeline-body">
               <div class="role-title">
-                <h3>PHP Developer</h3>
+                <h3>Software Developer</h3>
                 <span>Current</span>
               </div>
               <p>
-                I lead PHP backend development on the main product, using CakePHP 4.5, MVC principles, clean code standards, and RESTful API design.
+                I architect and develop RESTful APIs using PHP and CakePHP 4.5, NestJS and TypeScript, and .NET, following MVC principles and clean code standards.
               </p>
               <ul>
-                <li>Architects and delivers RESTful APIs using PHP and CakePHP 4.5.</li>
-                <li>Supports version upgrade work across PHP, CakePHP, MySQL, Playwright, and NestJS, helping keep backend services, test suites, and dependencies maintainable.</li>
-                <li>Engineered a PHP database anonymisation pipeline that deploys anonymised live data across UAT, Dev, and Test environments, reducing manual effort and data risk.</li>
+                <li>Architects and delivers RESTful APIs across PHP and CakePHP 4.5, NestJS and TypeScript, and .NET.</li>
+                <li>Engineered a database anonymisation pipeline that deploys anonymised live data across UAT, Dev, and Test environments, reducing manual effort and data risk.</li>
                 <li>Designs and optimises complex MySQL and PostgreSQL queries to improve performance and data integrity.</li>
-                <li>Develops NestJS microservices and .NET components for separate internal projects.</li>
+                <li>Develops NestJS microservices backed by PostgreSQL and .NET components for internal tooling.</li>
                 <li>Built a robust Playwright front-end test suite with consistently high pass rates, reducing regression time.</li>
                 <li>Produces backend unit test coverage, conducts in-house penetration testing, uses Docker, and supports AWS-based environment management.</li>
               </ul>
             </div>
           </article>
 
-          <article class="timeline-item">
+          <article class="timeline-item reveal">
             <div class="timeline-meta">
               <span>Oct 2022 - May 2024</span>
               <strong>Benefex - Nottingham, UK</strong>
@@ -192,16 +296,68 @@
         </div>
       </section>
 
+      <section class="section current-project" id="building">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Currently building</p>
+          <h2>ApiReplay — a developer tool for safer API change validation.</h2>
+        </div>
+        <article class="build-card reveal">
+          <div class="build-copy">
+            <div class="build-meta">
+              <span class="status-pill"><i></i> In progress</span>
+              <span>Personal project · Rust</span>
+            </div>
+            <h3>Record once. Replay against another service.</h3>
+            <p>
+              ApiReplay is an early-stage CLI tool designed to capture API requests from one service and replay them against another. The goal is to make it easier to compare behaviour and validate changes between environments or service versions.
+            </p>
+            <div class="build-actions">
+              <a class="button project-button" href="https://github.com/Powerer99/ApiReplay" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+              <span>Public repository · active development</span>
+            </div>
+          </div>
+          <div class="build-visual" aria-label="Planned ApiReplay workflow">
+            <p>Planned workflow</p>
+            <div class="flow-step active"><span>01</span><strong>Capture</strong><small>HTTP requests</small></div>
+            <i aria-hidden="true">↓</i>
+            <div class="flow-step"><span>02</span><strong>Store</strong><small>Reusable recordings</small></div>
+            <i aria-hidden="true">↓</i>
+            <div class="flow-step"><span>03</span><strong>Replay</strong><small>Target service</small></div>
+            <i aria-hidden="true">↓</i>
+            <div class="flow-step"><span>04</span><strong>Compare</strong><small>Response differences</small></div>
+          </div>
+          <div class="build-stack" aria-label="ApiReplay technology stack">
+            <span>Rust</span><span>Axum</span><span>Tokio</span><span>Reqwest</span><span>Serde</span><span>Clap</span>
+          </div>
+        </article>
+      </section>
+
       <section class="section projects-section" id="projects">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Impact</p>
-          <h2>Evidence of useful, production-minded engineering.</h2>
+        <section class="replay-demo" aria-labelledby="replay-title">
+          <div class="demo-heading"><div><p class="eyebrow">Try the idea</p><h2 id="replay-title">What changed in this API response?</h2></div><span class="demo-label">Illustrative browser simulation</span></div>
+          <p>Explore the idea behind ApiReplay using fictional fixtures. This demo runs locally in your browser; the Rust project is in progress and is not powering this simulation.</p>
+          <div class="demo-controls">
+            <label for="replay-scenario">Target behaviour<select id="replay-scenario"><option value="same">Identical response</option><option value="changed" selected>Changed response fields</option><option value="error">Service error</option></select></label>
+            <button class="button primary" id="run-replay" type="button" disabled>Run comparison →</button>
+            <button class="button secondary" id="reset-replay" type="button" disabled>Reset</button>
+          </div>
+          <p class="request-line"><span>GET</span> /api/demo/orders/1042 <small>Fictional request · no network call</small></p>
+          <div class="response-grid"><div><h3>Recorded response</h3><pre id="recorded-response">200 OK
+{ "id": 1042, "status": "confirmed", "total": 49 }</pre></div><div><h3>Target response</h3><pre id="target-response">Run a comparison to inspect the target.</pre></div></div>
+          <div class="replay-result" role="status" aria-live="polite" aria-atomic="true"><strong id="replay-summary">Ready to compare</strong><ul id="replay-differences"></ul></div>
+          <noscript><p>Enable JavaScript to run this illustrative comparison. You can still explore the project description and repository above.</p></noscript>
+        </section>
+        <div class="section-heading reveal">
+          <p class="eyebrow">04 · Selected impact</p>
+          <h2>Engineering work with a clear reason to exist.</h2>
         </div>
         <div class="project-grid project-grid-wide">
-          <article class="project-card">
-            <span class="project-tag">PHP / Data</span>
+          <article class="project-card reveal" data-accent="data">
+            <span class="project-index">01</span>
+            <span class="project-tag">Data systems</span>
             <h3>Database Anonymisation Pipeline</h3>
-            <p>Engineered a PHP pipeline that anonymises live database data and deploys it across UAT, Dev, and Test environments.</p>
+            <p>Engineered a pipeline that anonymises live database data and deploys it across UAT, Dev, and Test environments.</p>
+            <details class="case-detail"><summary>Explore the engineering context</summary><div><h4>The need</h4><p>Development and testing environments needed usable data with less manual preparation and reduced data risk.</p><h4>My contribution</h4><p>Engineered the automated anonymisation and deployment pipeline across UAT, Dev, and Test.</p><h4>Why it matters</h4><p>Connects database work, automation, and security awareness to an everyday engineering need.</p></div></details>
             <dl>
               <div>
                 <dt>Impact</dt>
@@ -209,14 +365,16 @@
               </div>
               <div>
                 <dt>Stack</dt>
-                <dd>PHP, SQL, environments</dd>
+                <dd>SQL, environment automation</dd>
               </div>
             </dl>
           </article>
-          <article class="project-card">
+          <article class="project-card reveal" data-accent="quality">
+            <span class="project-index">02</span>
             <span class="project-tag">Testing</span>
             <h3>Playwright Regression Suite</h3>
             <p>Built a stable automated front-end test suite with consistently high pass rates to reduce regression time and improve release confidence.</p>
+            <details class="case-detail"><summary>Explore the engineering context</summary><div><h4>The need</h4><p>Repeatable regression checks that teams can trust when application behaviour changes.</p><h4>My contribution</h4><p>Built a suite of non-flaky Playwright front-end tests with consistently high pass rates.</p><h4>Why it matters</h4><p>Reduces regression time and complements backend unit coverage.</p></div></details>
             <dl>
               <div>
                 <dt>Impact</dt>
@@ -228,25 +386,29 @@
               </div>
             </dl>
           </article>
-          <article class="project-card">
-            <span class="project-tag">Modernisation</span>
-            <h3>Framework and Tooling Version Upgrades</h3>
-            <p>Contributes to upgrade work across PHP, CakePHP, MySQL, Playwright, and NestJS, keeping application code, database compatibility, automated tests, and backend dependencies current.</p>
+          <article class="project-card reveal" data-accent="backend">
+            <span class="project-index">03</span>
+            <span class="project-tag">Microservices</span>
+            <h3>NestJS Backend Services</h3>
+            <p>Develops NestJS microservices integrated with PostgreSQL, improving scalability and separation of concerns across backend modules.</p>
+            <details class="case-detail"><summary>Explore the engineering context</summary><div><h4>The work</h4><p>Developing NestJS microservices integrated with PostgreSQL at SortGroup.</p><h4>Technical focus</h4><p>TypeScript backend services, database integration, and clearer separation of responsibilities between modules.</p></div></details>
             <dl>
               <div>
                 <dt>Impact</dt>
-                <dd>Maintainability and compatibility</dd>
+                <dd>Scalability and modularity</dd>
               </div>
               <div>
                 <dt>Focus</dt>
-                <dd>PHP, CakePHP, MySQL, Playwright, NestJS</dd>
+                <dd>NestJS, TypeScript, PostgreSQL</dd>
               </div>
             </dl>
           </article>
-          <article class="project-card">
+          <article class="project-card reveal" data-accent="systems">
+            <span class="project-index">04</span>
             <span class="project-tag">SQL / .NET</span>
             <h3>Benefits Configuration Delivery</h3>
             <p>Delivered bespoke C# employee benefits configurations and reusable SQL diagnostic scripts for client-specific requirements.</p>
+            <details class="case-detail"><summary>Explore the engineering context</summary><div><h4>The need</h4><p>Client-specific benefits configurations with complex eligibility rules, including up to 25 dependants per client.</p><h4>My contribution</h4><p>Delivered C# and .NET configuration work through design, build, and QA; resolved legacy defects and created reusable SQL diagnostics.</p><h4>Why it matters</h4><p>Combines technical problem-solving with requirements clarification and direct client communication.</p></div></details>
             <dl>
               <div>
                 <dt>Impact</dt>
@@ -262,58 +424,70 @@
       </section>
 
       <section class="section skills-section" id="skills">
-        <div class="section-heading">
-          <p class="eyebrow">Technical Skills</p>
-          <h2>PHP backend skills.</h2>
+        <div class="section-heading reveal">
+          <p class="eyebrow">05 · Technical skills</p>
+          <h2>A practical toolkit for building and improving software.</h2>
         </div>
-        <div class="skills-layout">
-          <article>
-            <h3>Expert / Primary</h3>
+        <div class="skill-filters reveal" role="group" aria-label="Filter technical skills">
+          <button type="button" class="active" data-skill-filter="all">All skills</button>
+          <button type="button" data-skill-filter="backend">Backend</button>
+          <button type="button" data-skill-filter="quality">Quality</button>
+          <button type="button" data-skill-filter="data">Data</button>
+        </div>
+        <div class="skills-layout reveal">
+          <article data-skill-group="backend">
+            <h3>APIs & PHP</h3>
             <div class="skill-list">
               <span>PHP</span>
-              <span>PHP Version Upgrades</span>
               <span>CakePHP 4.5</span>
-              <span>CakePHP Upgrades</span>
               <span>RESTful API Design</span>
               <span>MVC</span>
               <span>Clean Code</span>
             </div>
           </article>
-          <article>
+          <article data-skill-group="backend data">
             <h3>Backend & Data</h3>
             <div class="skill-list">
               <span>MySQL</span>
-              <span>MySQL Version Upgrades</span>
               <span>PostgreSQL</span>
               <span>NestJS</span>
-              <span>NestJS Version Upgrades</span>
               <span>TypeScript</span>
               <span>.NET</span>
               <span>C#</span>
             </div>
           </article>
-          <article>
+          <article data-skill-group="quality">
             <h3>Quality & Delivery</h3>
             <div class="skill-list">
               <span>Unit Testing</span>
               <span>E2E Testing</span>
               <span>Playwright</span>
-              <span>Playwright Version Upgrades</span>
               <span>Docker</span>
               <span>AWS</span>
               <span>Penetration Testing</span>
               <span>Agile / Jira</span>
             </div>
           </article>
+          <article data-skill-group="data">
+            <h3>Data & Analysis</h3>
+            <div class="skill-list">
+              <span>Data Analysis</span>
+              <span>Python</span>
+              <span>Tableau</span>
+              <span>Excel</span>
+              <span>SQL Diagnostics</span>
+              <span>Data Reporting</span>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="section proof-section">
-        <div class="section-heading">
-          <p class="eyebrow">Education</p>
-          <h2>Computer science background.</h2>
+        <div class="section-heading reveal">
+          <p class="eyebrow">06 · Foundation</p>
+          <h2>Computer science fundamentals, backed by commercial practice.</h2>
         </div>
-        <div class="proof-grid">
+        <div class="proof-grid reveal">
           <article>
             <h3>BSc Computer Science (2:1)</h3>
             <p>Kingston University, London, UK. Graduated 2022 with a high 2:1; final project focused on PHP backend development and database architecture.</p>
@@ -329,33 +503,43 @@
         </div>
       </section>
 
-      <section class="quote-section">
-        <blockquote>
-          I build backend systems with hands-on ownership across PHP APIs, data pipelines, automated testing, cloud-aware delivery, and client-focused technical work.
-        </blockquote>
-        <p>Profile summary</p>
+      <section class="quote-section reveal">
+        <p class="quote-label">How I work</p>
+        <blockquote>I care about the full path from a requirement to reliable software in production.</blockquote>
+        <div class="principles" aria-label="Working principles">
+          <span>Clean architecture</span><span>Useful automation</span><span>Measured delivery</span><span>Clear communication</span>
+        </div>
       </section>
 
-      <section class="contact-section" id="contact">
+      <section class="contact-section reveal" id="contact">
         <div class="contact-copy">
-          <p class="eyebrow">Contact</p>
-          <h2>Available for PHP backend and software developer opportunities.</h2>
+          <p class="eyebrow">07 · Let’s talk</p>
+          <h2>Looking for a developer who can own backend work and collaborate well?</h2>
           <p>
-            Connect with me or send me a private message on LinkedIn to discuss a role or project.
+            I’m interested in software and backend development opportunities where reliable engineering, continuous improvement, and thoughtful delivery matter.
           </p>
           <div class="contact-actions">
-            <a class="button primary" href="https://www.linkedin.com/in/david-ibrahim-4974721a1/" target="_blank" rel="noreferrer">Contact on LinkedIn</a>
-            <a class="button secondary" href="assets/David_Ibrahim_PHP_Developer_CV.pdf" target="_blank">View CV</a>
+            <a class="button primary" href="mailto:ibrahimdavid08@gmail.com">Email me <span aria-hidden="true">→</span></a>
+            <a class="button secondary" href="https://www.linkedin.com/in/david-ibrahim-4974721a1/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="assets/David_Ibrahim_PHP_Developer_CV.pdf" target="_blank" rel="noreferrer">View CV</a>
           </div>
+        </div>
+        <div class="contact-card" aria-label="Contact details">
+          <span>Direct contact</span>
+          <a href="mailto:ibrahimdavid08@gmail.com">ibrahimdavid08@gmail.com</a>
+          <p>Long Eaton, Nottingham, UK</p>
+          <div class="contact-status"><i></i> Open to relevant opportunities</div>
         </div>
       </section>
     </main>
 
     <footer>
-      <span>David Ibrahim</span>
-      <span>PHP Developer - Long Eaton, Nottingham, UK</span>
+      <span><strong>David Ibrahim</strong> · Software Developer</span>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
     </footer>
 
     <script src="script.js"></script>
+    <script type="module" src="lab.js"></script>
+    <script type="module" src="network.js"></script>
   </body>
 </html>
