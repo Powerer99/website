@@ -1990,3 +1990,11 @@ footer a {
     transform: none;
   }
 }
+
+.project-card-featured {
+  grid-column: 1 / -1;
+}
+
+.project-card-featured .project-button {
+  margin-top: 18px;
+}

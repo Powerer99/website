@@ -352,8 +352,26 @@
           <h2>Engineering work with a clear reason to exist.</h2>
         </div>
         <div class="project-grid project-grid-wide">
-          <article class="project-card reveal" data-accent="data">
+          <article class="project-card project-card-featured reveal" data-accent="backend">
             <span class="project-index">01</span>
+            <span class="project-tag">JetBrains plugin</span>
+            <h3>BranchFuse</h3>
+            <p>A plugin for JetBrains IDEs that runs Bitbucket Cloud Pipelines and GitHub Actions workflows for any branch, follows them live, and turns failures into clickable file:line links, all without leaving the editor.</p>
+            <details class="case-detail"><summary>Explore the engineering context</summary><div><h4>The need</h4><p>Starting a CI run for a branch, watching its logs, and tracing a failing test back to the code usually means switching between the IDE and a browser.</p><h4>What it does</h4><p>Detects the repository from the project's Git remotes, starts branch, custom, or <code>workflow_dispatch</code> runs with variables and inputs, streams step logs and test reports live, and links each failure straight to the right file and line. Runs can be stopped and revisited from history.</p><h4>Privacy by design</h4><p>BranchFuse has no server and no telemetry. Tokens live only in the IDE's password safe and are sent only to Bitbucket or GitHub.</p></div></details>
+            <dl>
+              <div>
+                <dt>Impact</dt>
+                <dd>CI feedback inside the IDE</dd>
+              </div>
+              <div>
+                <dt>Works with</dt>
+                <dd>Bitbucket Pipelines, GitHub Actions, JetBrains IDEs 2025.1+</dd>
+              </div>
+            </dl>
+            <a class="button project-button" href="https://powerer99.github.io/branchfuse-legal/getting-started" target="_blank" rel="noreferrer">Getting started guide <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card reveal" data-accent="data">
+            <span class="project-index">02</span>
             <span class="project-tag">Data systems</span>
             <h3>Database Anonymisation Pipeline</h3>
             <p>Engineered a pipeline that anonymises live database data and deploys it across UAT, Dev, and Test environments.</p>
@@ -370,7 +388,7 @@
             </dl>
           </article>
           <article class="project-card reveal" data-accent="quality">
-            <span class="project-index">02</span>
+            <span class="project-index">03</span>
             <span class="project-tag">Testing</span>
             <h3>Playwright Regression Suite</h3>
             <p>Built a stable automated front-end test suite with consistently high pass rates to reduce regression time and improve release confidence.</p>
@@ -387,7 +405,7 @@
             </dl>
           </article>
           <article class="project-card reveal" data-accent="backend">
-            <span class="project-index">03</span>
+            <span class="project-index">04</span>
             <span class="project-tag">Microservices</span>
             <h3>NestJS Backend Services</h3>
             <p>Develops NestJS microservices integrated with PostgreSQL, improving scalability and separation of concerns across backend modules.</p>
@@ -404,7 +422,7 @@
             </dl>
           </article>
           <article class="project-card reveal" data-accent="systems">
-            <span class="project-index">04</span>
+            <span class="project-index">05</span>
             <span class="project-tag">SQL / .NET</span>
             <h3>Benefits Configuration Delivery</h3>
             <p>Delivered bespoke C# employee benefits configurations and reusable SQL diagnostic scripts for client-specific requirements.</p>
